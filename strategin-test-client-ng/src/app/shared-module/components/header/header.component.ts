@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
-import { AuthState } from '../../../auth/reducers';
-import { AuthActions } from '../../../auth/action-types';
+import { AuthState } from '../../../auth-module/reducers';
+import { AuthActions } from '../../../auth-module/action-types';
 import { Router } from '@angular/router';
-import { getuserUsername } from '../../../auth/auth.selectors';
+import { getuserUsername } from '../../../auth-module/auth.selectors';
 
 @Component({
   selector: 'app-header',

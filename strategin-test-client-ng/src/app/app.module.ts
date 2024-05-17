@@ -9,9 +9,9 @@ import { SharedModule } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './auth-module/auth.module';
 import { CardModule } from 'primeng/card';
-import { StateginAnnuaireModule } from './stategin-annuaire/stategin-annuaire.module';
+import { StateginAnnuaireModule } from './annuaire-module/stategin-annuaire.module';
 import { ApiUrlInterceptor } from './interceptor';
 
 @NgModule({
