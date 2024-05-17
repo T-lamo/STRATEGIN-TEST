@@ -1,0 +1,19 @@
+<ng-container *ngIf="username|async as name">
+    <div class="layout-topbar">
+        <div class="right-topbar">
+            <a class="layout-topbar-logo">
+                <img alt="logo" src="./../../../../assets/images/strateginLogo.png">
+            </a>
+        </div>
+
+        <div class="layout-topbar-menu">
+            <h2 class="p-2">{{name | uppercase}}</h2>
+
+            <div class="layout-topbar-button">
+                <app-logout (click)="logout()" class="p-link " [color]="'var(--text-color)'"
+                    class="p-link"></app-logout>
+
+            </div>
+        </div>
+    </div>
+</ng-container>

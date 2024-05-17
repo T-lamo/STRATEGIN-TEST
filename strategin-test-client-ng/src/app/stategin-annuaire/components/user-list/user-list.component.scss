@@ -1,0 +1,14 @@
+.container {
+  margin-top: 6rem;
+}
+
+.p-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:hover {
+  border: 1px solid var(--surface-100);
+  border-radius: 0.5rem;
+}
