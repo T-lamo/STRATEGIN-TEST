@@ -1,0 +1,16 @@
+@use "./mixins";
+:root {
+  --danger-1: #e74c3c;
+  --danger-2: #c0392b;
+}
+
+//reset
+* {
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: var(--danger-1);
+  font-size: 14px;
+  font-weight: 500;
+}
