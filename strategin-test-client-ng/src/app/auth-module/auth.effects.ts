@@ -8,7 +8,7 @@ import { AuthState } from './reducers';
 import { Store } from '@ngrx/store';
 import { ILoginResponse } from '../shared-module/model/auth.model';
 import { of } from 'rxjs';
-import { UserActions } from '../stategin-annuaire/store/actions';
+import { UserActions } from '../annuaire-module/store/actions';
 
 @Injectable()
 export class AuthEffects {
