@@ -1,6 +1,7 @@
 import { Database } from "../config/database";
 import mongoose from "mongoose";
 import { userModel } from "./user";
+import { Paginator } from "./paginator";
 
 export class Query<T> {
   public dbconn = Database.getInstance();
@@ -10,8 +11,9 @@ export class Query<T> {
     }
   }
 
-  getAll(
-    data: mongoose.Model<T>
+  getPaginateRessource(
+    data: mongoose.Model<T>,
+    paginator: Paginator
   ): Promise<
     mongoose.IfAny<
       T,
@@ -19,10 +21,15 @@ export class Query<T> {
       mongoose.Document<unknown, {}, T> & mongoose.Require_id<T>
     >[]
   > {
-    const result = async () => await data.find();
+    const result = async () =>
+      await data.find().skip(paginator.first).limit(paginator.rows);
     return result();
   }
 
+  getQuantity(data: mongoose.Model<T>): Promise<number> {
+    const result = async () => await data.estimatedDocumentCount();
+    return result();
+  }
   createRessource(
     model: mongoose.Model<T>,
     data: T

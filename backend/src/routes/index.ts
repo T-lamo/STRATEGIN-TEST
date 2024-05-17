@@ -13,6 +13,6 @@ appRoutes.post("/register", (req, res) => {
   authController.register(req, res);
 });
 
-appRoutes.get("/users", authenticateToken, (req, res) => {
+appRoutes.post("/users", authenticateToken, (req, res) => {
   userController.getUsers(req, res);
 });
