@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Store, select } from '@ngrx/store';
-import { tap } from 'rxjs';
+import { select, Store } from '@ngrx/store';
+import { Paginator } from '../../../shared-module/model/table';
 import { UserActions } from '../../store/actions';
-import { AnnuaireState } from '../../store/states';
 import {
   selectUsersPaginator,
   selectUsersResponse,
 } from '../../store/selectors/user.selector';
-import { Paginator } from '../../../shared-module/model/table';
+import { AnnuaireState } from '../../store/states';
 
 @Component({
   selector: 'app-user-list',

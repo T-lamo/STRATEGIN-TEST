@@ -1,18 +1,9 @@
-import { isDevMode } from '@angular/core';
-import {
-  ActionReducer,
-  ActionReducerMap,
-  createFeatureSelector,
-  createReducer,
-  createSelector,
-  MetaReducer,
-  on,
-} from '@ngrx/store';
-import { AuthActions } from '../action-types';
+import { createReducer, on } from '@ngrx/store';
 import { produce } from 'immer';
-import { ILogin, IUser } from '../../shared-module/model/auth.model';
-import { ApiCallState } from '../../shared-module/model/enum';
 import { ApiCall } from '../../shared-module/model/api-call';
+import { IUser } from '../../shared-module/model/auth.model';
+import { ApiCallState } from '../../shared-module/model/enum';
+import { AuthActions } from '../action-types';
 
 export const authFeatureKey = 'auth';
 

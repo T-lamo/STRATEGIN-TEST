@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { AuthActions } from './action-types';
-import { catchError, delay, map, switchMap, tap } from 'rxjs/operators';
-import { NavigationExtras, Router } from '@angular/router';
-import { HttpSharedService } from '../shared-module/services/http-shared.service';
-import { AuthState } from './reducers';
 import { Store } from '@ngrx/store';
-import { ILoginResponse } from '../shared-module/model/auth.model';
 import { of } from 'rxjs';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { UserActions } from '../annuaire-module/store/actions';
+import { ILoginResponse } from '../shared-module/model/auth.model';
+import { HttpSharedService } from '../shared-module/services/http-shared.service';
+import { AuthActions } from './action-types';
+import { AuthState } from './reducers';
 
 @Injectable()
 export class AuthEffects {

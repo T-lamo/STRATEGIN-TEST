@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
-import * as fromAnnuaire from './store/reducers';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '../auth-module/login/login.component';
-import { RegisterComponent } from '../auth-module/register/register.component';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { AnnuaireLayoutComponent } from './pages/annuaire-layout/annuaire-layout.component';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { AuthGuard } from '../auth-module/auth.guard';
 import { userResolver } from '../shared-module/resolvers/resolver';
 import { SharedModule } from '../shared-module/shared.module';
-import { AuthGuard } from '../auth-module/auth.guard';
-import { EffectsModule } from '@ngrx/effects';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { AnnuaireLayoutComponent } from './pages/annuaire-layout/annuaire-layout.component';
 import { AnnuaireEffects } from './store/effects';
+import * as fromAnnuaire from './store/reducers';
+
 export const routes: Routes = [
   {
     path: '',
