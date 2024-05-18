@@ -1,6 +1,5 @@
-import { Database } from "../config/database";
 import mongoose from "mongoose";
-import { userModel } from "./user";
+import { Database } from "../config/database";
 import { Paginator } from "./paginator";
 
 export class Query<T> {

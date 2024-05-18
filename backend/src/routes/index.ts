@@ -1,6 +1,6 @@
 import express from "express";
-import { userController } from "../controllers/user.controller";
 import { authController } from "../controllers/auth.controller";
+import { userController } from "../controllers/user.controller";
 import { authenticateToken } from "../middlewares/auth.mid";
 
 export const appRoutes = express();
