@@ -1,18 +1,18 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
+import { RouterModule, Routes } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
-import * as fromAuth from './reducers';
-import { AuthGuard } from './auth.guard';
-import { AuthEffects } from './auth.effects';
+import { StoreModule } from '@ngrx/store';
 import { ButtonModule } from 'primeng/button';
-import { RegisterComponent } from './register/register.component';
-import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { AuthHeaderComponent } from './auth-header/auth-header.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { AuthEffects } from './auth.effects';
+import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import * as fromAuth from './reducers';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   {

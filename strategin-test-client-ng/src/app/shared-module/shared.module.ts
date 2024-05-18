@@ -1,14 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
-import { HttpSharedService } from './services/http-shared.service';
-import { HomeComponent } from './components/home/home.component';
-import { StoreModule } from '@ngrx/store';
-import { LayoutComponent } from './components/layout/layout.component';
-import { HeaderComponent } from './components/header/header.component';
+import { NgModule } from '@angular/core';
+import { PaginatorModule } from 'primeng/paginator';
 import { SidebarModule } from 'primeng/sidebar';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 import { CloseComponent } from './components/icons/close/close.component';
 import { LogoutComponent } from './components/icons/logout/logout.component';
-import { PaginatorModule } from 'primeng/paginator';
+import { LayoutComponent } from './components/layout/layout.component';
+import { HttpSharedService } from './services/http-shared.service';
 
 @NgModule({
   declarations: [
