@@ -1,9 +1,7 @@
+import { Request, Response } from "express";
+import { Paginator } from "../model/paginator";
 import { Query } from "../model/query";
 import { User, userModel } from "../model/user";
-import { Request, Response } from "express";
-import bcrypt from "bcrypt";
-import { Paginator } from "../model/paginator";
-const salt = bcrypt.genSaltSync(10);
 
 export const userController = {
   getUsers: async (req: Request, res: Response) => {
@@ -14,7 +12,7 @@ export const userController = {
         paginator
       );
       const list = users.map(
-        ({ username, email, password, id }) => new User({ username, email, id })
+        ({ username, email, id }) => new User({ username, email, id })
       );
       paginator.total = await new Query<User>().getQuantity(userModel);
 
