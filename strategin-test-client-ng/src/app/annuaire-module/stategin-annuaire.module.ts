@@ -23,6 +23,7 @@ export const routes: Routes = [
         path: 'users',
         component: UserListComponent,
       },
+      { path: '**', redirectTo: '/register' },
     ],
   },
 ];
